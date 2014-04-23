@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script src="lib/jquery/jquery-1.9.1.js" type="text/javascript"></script>
+    <script src="lib/jquery.mobile-1.2.0.min.js" type="text/javascript"></script>
+    <script src="cordova.js" type="text/javascript"></script>
+    <link rel="Stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="apple-touch-startup-image" href="lib/durandal/img/ios-startup-image-landscape.png" media="(orientation:landscape)" />
+    <link rel="apple-touch-startup-image" href="lib/durandal/img/ios-startup-image-portrait.png" media="(orientation:portrait)" />
+    <link rel="apple-touch-icon" href="lib/durandal/img/icon.png" />
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/ie10mobile.css" />
+    <link rel="stylesheet" href="lib/durandal/css/durandal.css" />
+    <link rel="stylesheet" href="css/samples.css" />
+</head>
+    <body>
+        <div id="applicationHost">
+            <div class="splash">
+                <div class="message">
+                    Durandal Starter Project
+                </div>
+                <i class="icon-spinner icon-2x icon-spin active"></i>
+            </div>
+        </div>
+        <script src="lib/require/require.js" data-main="app/main"></script>
+        <script type="text/javascript">
+    function showPictures() {
+        navigator.camera.getPicture(function (imageURI) {
+            $('img#picture').attr('src', imageURI);
+        }, function (error) {
+            $('img#picture').replaceWith('<p>' + error + '</p>');
+        }, { sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY, destinationType: navigator.camera.DestinationType.FILE_URI });
+    }
+
+    $(function () {
+        var compassWatchID, geoWatchID;
+
+        document.addEventListener("deviceready", function () {
+            alert("deviceready");
+            // Compass
+            compassWatchID = navigator.compass.watchHeading(function (heading) {
+                $('span#heading').html(heading.magneticHeading.toFixed(2) + '&#176;');
+            }, function (error) {
+                $('span#heading').text(error.code);
+            }, { frequency: 3000 });
+
+            // Connection
+            var networkState = navigator.network.connection.type,
+                states = {};
+
+            states[Connection.UNKNOWN] = 'Unknown';
+            states[Connection.ETHERNET] = 'Ethernet';
+            states[Connection.WIFI] = 'WiFi';
+            states[Connection.CELL_2G] = 'Cell 2G';
+            states[Connection.CELL_3G] = 'Cell 3G';
+            states[Connection.CELL_4G] = 'Cell 4G';
+            states[Connection.NONE] = 'No network';
+
+            $('span#connection').text(states[networkState]);
+
+            // Contacts
+            navigator.contacts.find(['displayName', 'email'], function (contacts) {
+                $('span#contacts').text(contacts.length + ' found');
+            }, function (error) {
+                $('span#contacts').text(error.code);
+            }, { multiple: true });
+
+            // Device properties
+            $('div#deviceprops').html(
+                '<strong>Name:</strong> ' + device.name + '<br/>' +
+                '<strong>Cordova version:</strong> ' + device.cordova + '<br/>' +
+                '<strong>Platform:</strong> ' + device.platform + '<br/>' +
+                '<strong>UUID:</strong> ' + device.uuid + '<br/>' +
+                '<strong>Version:</strong> ' + device.version + '<br/>'
+            );
+
+            // Geolocation
+            geoWatchID = navigator.geolocation.watchPosition(function (position) {
+                $('span#geolocation').text(position.coords.latitude.toFixed(2) + 'N, ' + position.coords.longitude.toFixed(2) + 'E');
+            }, function (error) {
+                $('span#geolocationerror').text(error.code + ': ' + error.message);
+            }, { frequency: 3000 });
+        });
+    }());
+        </script>
+
+    </body>
+</html>
+

@@ -1,0 +1,73 @@
+﻿<div >
+    <div data-theme="e" data-role="header">
+        <h3>
+            Welcome!
+        </h3>
+    </div>
+    <div data-role="content">
+        <div>
+            <b>
+                This is your Nomad project...
+            </b>
+        </div>
+        <ul data-role="listview" data-divider-theme="e" data-inset="true">
+            <li data-role="list-divider" role="heading">
+                Getting Started
+            </li>
+            <li data-theme="c">
+                <a href="http://www.vsnomad.com/documentation" target="_newtab">
+                    Read the guide
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="http://vsnomad.zendesk.com/" target="_newtab">
+                    Report a problem
+                </a>
+            </li>
+            <li data-theme="c">
+                Hit the build button and try it on a device!
+            </li>
+        </ul>
+
+        <hr />
+
+        <ul data-role="listview" data-divider-theme="e">
+            <li data-role="list-divider" role="heading">
+                Device Information
+            </li>
+            <li>
+                <h3>Compass heading: <span id="heading">n/a</span></h3>
+                <p>Uses compass.watchHeading</p>
+            </li>
+            <li>
+                <h3>Connection type: <span id="connection">n/a</span></h3>
+                <p>Uses connection.type</p>
+            </li>
+            <li data-theme="c">
+                <h3>Contacts: <span id="contacts">n/a</span></h3>
+                <p>Uses navigator.contacts.find</p>
+            </li>
+            <li data-theme="c">
+                <h3>Device properties:</h3>
+                <p>Uses device.*</p>
+                <div id="deviceprops" style="font-size: 11px;">n/a</div>
+            </li>
+            <li data-theme="c">
+                <h3>Geolocation: <span id="geolocation">n/a</span></h3>
+                <p>Uses navigator.geolocation.watchPosition</p>
+            </li>
+            <li data-theme="c">
+                <img alt="" src="../../images/choosephoto.png" id="picture" /><button data-role="button" data-inline="true" onclick="showPictures();">
+                    Choose a picture
+                </button>
+                <p><span id="geolocationerror"></span></p>
+            </li>
+        </ul>
+    </div>
+    <div data-theme="a" data-role="footer">
+    </div>
+
+    
+
+
+</div>

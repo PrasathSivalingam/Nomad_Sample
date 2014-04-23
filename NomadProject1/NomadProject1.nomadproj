@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <CompiledOutputPath>distrib\</CompiledOutputPath>
+    <OutputPath>bin\$(Configuration)</OutputPath>
+    <CordovaVersion>3.0</CordovaVersion>
+    <BuildCloudVersion>2.0</BuildCloudVersion>
+    <Name>NomadProject1</Name>
+    <RootNamespace>NomadProject1</RootNamespace>
+    <ProjectGuid>{ec4c762a-72fd-4c80-bdee-ccd5fc126002}</ProjectGuid>
+    <CertificatePath>Certificates\2014-04-18 - Nomad User</CertificatePath>
+    <ProvisioningProfilePath>ProvisioningProfiles\ProfileAquaVet.mobileprovision</ProvisioningProfilePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\hello\debug.log">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\hello\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\hello\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\shell.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\shell.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\ie10mobile.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\jquery.mobile-1.2.0.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\samples.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="cordova.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\choosephoto.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\css\bootstrap-responsive.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\css\bootstrap-responsive.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\css\bootstrap.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\css\bootstrap.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\img\glyphicons-halflings-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\img\glyphicons-halflings.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\js\bootstrap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\bootstrap\js\bootstrap.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\css\durandal.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\img\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\img\ios-startup-image-landscape.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\img\ios-startup-image-portrait.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\activator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\binder.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\composition.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\events.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\dialog.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\history.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\http.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\observable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\router.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\serializer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\widget.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\system.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\transitions\entrance.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\viewEngine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\viewLocator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\css\font-awesome-ie7.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\css\font-awesome-ie7.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\css\font-awesome.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\css\font-awesome.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\font\fontawesome-webfont.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\font-awesome\font\FontAwesome.otf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\jquery.mobile-1.2.0.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\jquery\jquery-1.9.1.intellisense.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\jquery\jquery-1.9.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\jquery\jquery-1.9.1.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\jquery\jquery-1.9.1.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout\knockout-2.3.0.debug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout\knockout-2.3.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\require\almond-custom.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\require\r.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\require\require.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\require\text.js">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\hello" />
+    <Folder Include="images" />
+    <Folder Include="app" />
+    <Folder Include="lib" />
+    <Folder Include="css" />
+    <Folder Include="lib\bootstrap" />
+    <Folder Include="lib\bootstrap\css" />
+    <Folder Include="lib\bootstrap\img" />
+    <Folder Include="lib\bootstrap\js" />
+    <Folder Include="lib\durandal" />
+    <Folder Include="lib\durandal\css\" />
+    <Folder Include="lib\durandal\img" />
+    <Folder Include="lib\durandal\js" />
+    <Folder Include="lib\durandal\js\transitions" />
+    <Folder Include="lib\durandal\js\plugins" />
+    <Folder Include="lib\font-awesome" />
+    <Folder Include="lib\font-awesome\css" />
+    <Folder Include="lib\font-awesome\font" />
+    <Folder Include="lib\jquery" />
+    <Folder Include="lib\knockout" />
+    <Folder Include="lib\require" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences" />
+  <Target Name="CoreCompile" />
+  <Target Name="CreateManifestResourceNames" />
+  <Target Name="CopyFilesToOutputDirectory">
+    <ItemGroup>
+      <AbsoluteContentDestinations Include="$(OutputPath)%(Content.Identity)" />
+    </ItemGroup>
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(AbsoluteContentDestinations)" />
+  </Target>
+</Project>
